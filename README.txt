@@ -1,4 +1,4 @@
-This is the Mass Actions block for Moodle 2.8 and up. Its appearance and behaviors
+This is the Mass Actions block for Moodle 3.2 and up. Its appearance and behaviors
 are largely the same as the version for Moodle 1.9.
 
 Created at University of Minnesota by the Custom Solutions team.
@@ -16,6 +16,38 @@ Once installed, capability "block/massaction:use" needs to be added to the roles
 
 
 RELEASE NOTE
+[2017013100]
+- Fix Travis-CI jshint errors when running builds
+
+[2017013000]
+- Removed one of the non-Javascript deletion confirmation steps
+- Corrected call to redirect() when attempting to delete activities to prevent errors being
+  thrown on deletion confirmation page
+
+[2016111700]
+- Updated the documentation for this.sections in js/module_selector.js
+- Overlooked adding '.modules' to one line of code checking whether any
+  modules have been added for a section
+
+[2016111600]
+- Improved the code that supports the OneTopic format, making it less reliant on
+  properties the user can change
+
+[2016111502]
+- Change required Moodle version to 3.2 (2016102700)
+- Bump plugin version to 4.0.0 to signify this is not compatible with earlier
+  versions
+
+[2016111501]
+- Fix bug with OneTopic format compatibility where, if the topics were not named
+  'Topic X' (where X is an integer greater than -1), the block would be unusable
+  because it would not draw checkboxes next to modules and would not correctly
+  populate all of its drop menus
+
+[2016111500]
+- Remove h3 tag requirement from module.js so Mass Actions will work with themes
+  that use non-h3 tags for section headings, from Dan Davis (rndme)
+
 [2016101301]
 - Enable compatibility with OneTopic course format
 - Bump version to 2.0.0 to signal this has diverged from the version of this
